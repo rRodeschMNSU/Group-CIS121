@@ -1,8 +1,8 @@
 Authors: 
 
 - Ryan Rodesch
-- Frank Jilek
-- {Author 3 Here}
+- Evan Anderson
+- Ari Walker
 
 Project: {TBD}
 
