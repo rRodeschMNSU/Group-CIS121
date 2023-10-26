@@ -1,14 +1,13 @@
 import random
-
+valid_chars = 'abcdefghijklmnopqrstubwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&'
 def generate_sub_list():
-    valid_chars = 'abcdefghijklmnopqrstubwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&'
+
     lst = [*valid_chars]
     random.shuffle(lst)
     return lst
 
 def encode_with_sublist(lst, string):
     lst = [*lst]
-    valid_chars = 'abcdefghijklmnopqrstubwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&'
     char_map = {valid_chars[i]: lst[i] for i in range(len(valid_chars))}
     encoded_string = ''
     for char in string:
