@@ -1,7 +1,9 @@
 import hashlib
 import random
 
-###This encodes the password
+# This encodes the password via SHA-256 salting
+# https://en.wikipedia.org/wiki/Salt_(cryptography)
+
 def generate_salt(length: int):
     salt = ""
     for PLACEHOLDER in range(length):
@@ -12,11 +14,14 @@ def generate_salt(length: int):
             salt += str(chr(random.randint(0, 25) + ord("a")))
     return salt
 
-###This writes the password 
+# Writes password to local passwrod storage
+
 def save_to_local(append):
     file = open("passwords.txt", "a")
     file.write(append)
 
+# Generates radon salt
+# https://en.wikipedia.org/wiki/Salt_(cryptography)
 
 def hash_it(salt, password):
     hasher = hashlib.sha256()
@@ -24,7 +29,7 @@ def hash_it(salt, password):
     hasher.update(password.encode("utf-8"))
     return hasher.hexdigest()
 
-
+# Class for importing in other methods
 class Encode:
     def __init__(self, site, password):
         self.site = site
