@@ -1,7 +1,7 @@
 import hashlib
 import random
 
-
+###This encodes the password
 def generate_salt(length: int):
     salt = ""
     for PLACEHOLDER in range(length):
@@ -12,7 +12,7 @@ def generate_salt(length: int):
             salt += str(chr(random.randint(0, 25) + ord("a")))
     return salt
 
-
+###This writes the password 
 def save_to_local(append):
     file = open("passwords.txt", "a")
     file.write(append)
