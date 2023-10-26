@@ -1,7 +1,6 @@
 import random
 valid_chars = 'abcdefghijklmnopqrstubwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&'
 def generate_sub_list():
-
     lst = [*valid_chars]
     random.shuffle(lst)
     return lst
