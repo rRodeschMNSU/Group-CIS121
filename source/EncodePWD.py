@@ -18,7 +18,7 @@ def encode_with_sublist(lst, string):
 
 # Writes password to local passwrod storage
 def save_to_local(append):
-    file = open("passwords.txt", "a")
+    file = open("source\\passwords.txt", "a")
     file.write(f"{append}\n")
 
 # Class for importing in other methods
