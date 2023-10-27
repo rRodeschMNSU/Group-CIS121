@@ -7,4 +7,5 @@ Authors:
 Project: Password Manager
 
 Description:
-A simple SHA256-based password encoder/decoder with a text interface for retrieval and storage of passwords
+This program allows the user to encode passwords using a substitution cipher and decode them using the encryption key.
+To run the program, run TextInterface.py.
