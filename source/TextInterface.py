@@ -1,0 +1,28 @@
+# Prompt for either encode or decode
+# if decode, ask for site
+# if encode, as for site and password
+# on competion, loop the program
+from EncodePWD import Encode
+from DecodePWD import Decode
+
+def encode_user_in(site: str):
+    passcode =  input("Enter desired password to encode: ")
+    try:
+        encoder = Encode(site, passcode)
+        encoder()
+    except:
+        "Encoding failed due to an error withn your input, please restart and try again."
+        exit()
+    print("Password saved successfully.")
+
+def decode_user_in(site: str):
+    decoded = Decode(site)
+    decoded()
+    pass
+while True:
+    is_decode = bool(int(input("Encode: 1\nDecode: 2\n"))-1)
+    site = input("Enter site URL:")
+    if not is_decode:
+        encode_user_in(site)
+    elif is_decode:
+        decode_user_in(site)

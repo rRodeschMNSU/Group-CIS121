@@ -35,6 +35,3 @@ class Encode:
         save_to_local(f"{self.site} {self.encoded} {self.sublist}")
     def __str__(self):
         return f"The hashed password for {self.site} is {self.encoded}"
-coded = Encode("youtu.be", "o#211657o")
-coded()
-print(coded)
