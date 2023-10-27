@@ -18,7 +18,6 @@ def encode_user_in(site: str):
 def decode_user_in(site: str):
     decoded = Decode(site)
     decoded()
-    pass
 while True:
     is_decode = bool(int(input("Encode: 1\nDecode: 2\n"))-1)
     site = input("Enter site URL:")

@@ -1,11 +1,20 @@
 import random # import random module for randomizing encryption key
 
 valid_chars = 'abcdefghijklmnopqrstubwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&' # initialize a string of all valid characters
-
+# Shuffler
+def shuffle_indices(lst):
+    n = len(lst)
+    for i in range(n):
+        for _ in range(i, n):
+            # Generate a random index between i and n-1
+            random_index = random.randint(i, n-1)
+            # Swap elements at i and random_index
+            lst[i], lst[random_index] = lst[random_index], lst[i]
+    return lst
 # Randomizes the valid_chars string to create an encryption key
 def generate_sub_list():
     lst = [*valid_chars]
-    random.shuffle(lst)
+    lst = shuffle_indices(lst)
     return lst
 
 # Encrypts the input string using the encryption key
