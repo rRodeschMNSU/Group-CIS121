@@ -6,7 +6,7 @@ contents = file.readlines()
 
 # FIX this is broken 3:
 def decode(password, key):
-    char_map = {key[i]: valid_chars[i] for i in range(len(key))}
+    char_map = {key[i-1]: valid_chars[i-1] for i in range(len(key))}
     decoded_password = ''
     for char in password:
         if char in char_map:
