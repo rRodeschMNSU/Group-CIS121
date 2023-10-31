@@ -1,0 +1,5 @@
+TODO Refine data storage
+TODO add separate logins for multiple users
+TODO change save format to .json
+TODO Add tkinter window in lieu of CMD
+TODO Add help() docs
