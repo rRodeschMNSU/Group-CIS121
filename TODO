@@ -1,5 +1,6 @@
-TODO Refine data storage
-TODO add separate logins for multiple users
-TODO change save format to .json
-TODO Add tkinter window in lieu of CMD
+TODO Refactor data storage
+TODO Refactor cypher to more secure version
+TODO Refactor save format to .json
+TODO Refactor to use tkinter window in lieu of CMD
 TODO Add help() docs
+TODO Add separate logins for multiple users
